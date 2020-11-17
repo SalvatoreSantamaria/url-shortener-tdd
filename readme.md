@@ -4,4 +4,4 @@ The URL shortener should also return back the original URL when passed the short
 
 Built with Node.js, Mocha, and Chai
 
-Run tests npm run test
+Run tests with npm run test
