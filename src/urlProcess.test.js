@@ -6,10 +6,20 @@ describe('Running the urlProcesser', () => {
     const urlProcess = new UrlProcess()
   })
 
-  it ("Url.shortener should return a URL", () => {
+  it ("should have a method shortener that should return a URL", () => {
     const urlProcess = new UrlProcess()
     let actual = urlProcess.shortener('www.test.com')
-    expect(actual).to.deep.equal("http://somecompany")
+    expect(actual).to.deep.equal("http://somecompany1")
   })
+
+  it ("should return a url that is unique", () => {
+    const urlProcess = new UrlProcess()
+    let first = urlProcess.shortener('www.test.com')
+    let second = urlProcess.shortener('www.test.com')
+    expect(first).to.not.equal(second)
+  })
+
+  
+
 })
 

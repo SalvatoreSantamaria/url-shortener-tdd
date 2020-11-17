@@ -1,10 +1,12 @@
 class UrlProcess {
   constructor() {
-
+    this.count = 0
   }
 
-  shortener() {
-    return "http://somecompany"
+  shortener(url) {
+    let front = "http://somecompany"
+    this.count++
+    return(front + this.count)
   } 
 }
 
